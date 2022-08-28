@@ -21,7 +21,7 @@ def english_to_french(english_text):
     """
         Translates english text to french text via Watson AI
     """
-    if english_text == "":
+    if not english_text:
         return ""
     translation = language_translator.translate(
         text=english_text, model_id='en-fr').get_result()
@@ -32,7 +32,7 @@ def french_to_english(french_text):
     """
         Translates french text to english text via Watson AI
     """
-    if french_text == "":
+    if not french_text:
         return ""
     translation = language_translator.translate(
         text=french_text, model_id='fr-en').get_result()
